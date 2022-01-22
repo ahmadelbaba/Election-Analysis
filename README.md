@@ -49,10 +49,17 @@ This can be done in two ways:
 
 The reason the code will work is because our code is flexible. Our code parses through the differen rows in our source data file to find the different "Candidates" and "Counties". The list of Candidates and Counties are note hard coded. Rather our code discovers the two lists as it goes through the rows of our data file. 
 
-First our code declares lists in whihc we will store new counties/candidates as we find them:
+First our code declares lists in which we will store new counties/candidates as we find them (lines 18 and 22). We also declare dictionaries so we can store election results (lines 19 and 23):
 
 ![Lists](/Resources/Declaring_Lists.PNG)
 
-Second our code parses through the rows of our source data file and adds new counties/candidates to their respective lists as itt finds them:
+Second our code parses through the rows of our source data file and dynamically adds new candidates to their respective lists as it finds them. 
+- In line 51 we extract the name of the candidate from each row.
+- In line 59 we check if the candidate has already been added to our list.
+- In line 62 we add the candidate to our list if they have not been added before.
 
 ![Adding_to_Lists](/Resources/Adding_to_lists.PNG)
+
+Similarly we do the same to counties. Our code parses the rows in our source data file and dynamically adds new counties to their respective lists as it finds them. 
+
+The dynamic addition of candidates/counties relieves us from the need to hardcode candidate and county names and allows our code to accept new data and generate a comprehensive analysis.  

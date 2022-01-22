@@ -40,6 +40,19 @@ The analysis of the election show that:
 
 # Challenge Summary
 
-- The code developed can be reused to to anlze any election. This can be done simply changing the data in the source .csv file or by uploading a different .csv file and changing the filename in the code.
+The code developed can be reused to to anlze any election. 
+This can be done in two ways:
+- simply changing the data in the source .csv file name "election_results.csv" 
+- or by uploading a different .csv file and changing the filename in the code below:
 
-![Read_CSV](/Resources/Read_CSV.png)
+![Read_CSV](/Resources/Read_CSV.PNG)
+
+The reason the code will work is because our code is flexible. Our code parses through the differen rows in our source data file to find the different "Candidates" and "Counties". The list of Candidates and Counties are note hard coded. Rather our code discovers the two lists as it goes through the rows of our data file. 
+
+First our code declares lists in whihc we will store new counties/candidates as we find them:
+
+![Lists](/Resources/Declaring_Lists.PNG)
+
+Second our code parses through the rows of our source data file and adds new counties/candidates to their respective lists as itt finds them:
+
+![Adding_to_Lists](/Resources/Adding_to_lists.PNG)
